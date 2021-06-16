@@ -12,7 +12,9 @@ class AlbumInfo extends DataModel {
   String? get albumArt => _data!['album_art'];
 
   ///Returns the artist name that songs appears in this album.
-  String? get artist => _data!['artist'];
+  String? get artist => _data!['artist'] != "<unknown>"
+    ? _data!['artist']
+    : "Unknown Artist";
 
   String? get firstYear => _data!['minyear'];
 

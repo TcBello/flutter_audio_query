@@ -6,7 +6,9 @@ class ArtistInfo extends DataModel {
   ArtistInfo._(Map<dynamic, dynamic> map) : super._(map);
 
   /// Returns the name of artist
-  String? get name => _data!['artist'];
+  String? get name => _data!['artist'] != "<unknown>"
+    ? _data!['artist']
+    : "Unknown Artist";
 
   /// Returns the number of tracks of current artist
   String? get numberOfTracks => _data!['number_of_tracks'];
