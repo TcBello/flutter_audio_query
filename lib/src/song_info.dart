@@ -11,7 +11,9 @@ class SongInfo extends DataModel {
   String? get artistId => _data!['artist_id'];
 
   /// Returns the artist name who create this audio file.
-  String? get artist => _data!['artist'];
+  String? get artist => _data!['artist'] != "<unknown>"
+    ? _data!['artist']
+    : "Unknown Artist";
 
   /// Returns the album title which this song appears.
   String? get album => _data!['album'];
