@@ -32,7 +32,7 @@ class PlaylistInfo extends DataModel {
       FlutterAudioQuery.PLAYLIST_METHOD_TYPE: PlayListMethodType.WRITE.index,
       "playlist_id": this.id,
       "song_id": song.id
-    }) ;
+    });
 
     PlaylistInfo data = PlaylistInfo._(updatedData[0]);
     this._updatePlaylistData(data);
